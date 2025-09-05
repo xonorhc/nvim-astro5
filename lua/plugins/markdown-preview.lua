@@ -1,10 +1,10 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 ---@type LazySpec
 return {
   "iamcco/markdown-preview.nvim",
   build = function(plugin)
-    local package_manager = vim.fn.executable "yarn" and "yarn" or vim.fn.executable "npx" and "npx -y yarn" or false
+    local package_manager = vim.fn.executable "npm" and "npm" or vim.fn.executable "npx" and "npx -y yarn" or false
 
     --- HACK: Use `yarn` or `npx` when possible, otherwise throw an error
     ---@see https://github.com/iamcco/markdown-preview.nvim/issues/690
@@ -24,6 +24,8 @@ return {
   init = function()
     local plugin = require("lazy.core.config").spec.plugins["markdown-preview.nvim"]
     vim.g.mkdp_filetypes = require("lazy.core.plugin").values(plugin, "ft", true)
+    vim.g.mkdp_markdown_css = "/home/xonorhc/Dropbox/tech/css/markdown-air.css"
+    vim.g.mkdp_preview_options = { disable_filename = true, }
   end,
   dependencies = {
     { "AstroNvim/astroui", opts = { icons = { Markdown = "" } } },
