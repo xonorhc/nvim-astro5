@@ -1,4 +1,4 @@
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 return {
   {
@@ -20,13 +20,13 @@ return {
       end
     end,
   },
-  -- {
-  --   "williamboman/mason-lspconfig.nvim",
-  --   optional = true,
-  --   opts = function(_, opts)
-  --     opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, { "sqls" })
-  --   end,
-  -- },
+  {
+    "williamboman/mason-lspconfig.nvim",
+    optional = true,
+    opts = function(_, opts)
+      opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, { "sqls" })
+    end,
+  },
   {
     "jay-babu/mason-null-ls.nvim",
     optional = true,
@@ -52,21 +52,21 @@ return {
       opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, { "sqlfluff" })
     end,
   },
-  -- {
-  --   "stevearc/conform.nvim",
-  --   optional = true,
-  --   opts = {
-  --     formatters_by_ft = {
-  --       sql = { "pg_format", "sqlfluff", stop_after_first = true },
-  --     },
-  --     formatters = {
-  --       sqlfluff = {
-  --         args = { "fix", "--dialect=ansi", "-" },
-  --         require_cwd = false,
-  --       },
-  --     },
-  --   },
-  -- },
+  {
+    "stevearc/conform.nvim",
+    optional = true,
+    opts = {
+      formatters_by_ft = {
+        sql = { "pg_format", "sqlfluff", stop_after_first = true },
+      },
+      formatters = {
+        sqlfluff = {
+          args = { "fix", "--dialect=ansi", "-" },
+          require_cwd = false,
+        },
+      },
+    },
+  },
   {
     "mfussenegger/nvim-lint",
     optional = true,
@@ -76,40 +76,40 @@ return {
       },
     },
   },
-  -- {
-  --   "AstroNvim/astrolsp",
-  --   opts = {
-  --     config = {
-  --       sqls = {
-  --         on_attach = function(client)
-  --           -- Disable formatting due to bugs: https://github.com/sqls-server/sqls/issues/149
-  --           client.server_capabilities.documentFormattingProvider = false
-  --           client.server_capabilities.documentRangeFormattingProvider = false
-  --         end,
-  --       },
-  --     },
-  --   },
-  -- },
-  -- {
-  --   "nanotee/sqls.nvim",
-  --   dependencies = {
-  --     "AstroNvim/astrocore",
-  --     opts = {
-  --       autocmds = {
-  --         sqls_attach = {
-  --           {
-  --             event = "LspAttach",
-  --             desc = "Load sqls.nvim with sqls",
-  --             callback = function(args)
-  --               local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
-  --               if client.name == "sqls" then
-  --                 require("sqls").on_attach(client, args.buf)
-  --               end
-  --             end,
-  --           },
-  --         },
-  --       },
-  --     },
-  --   },
-  -- },
+  {
+    "AstroNvim/astrolsp",
+    opts = {
+      config = {
+        sqls = {
+          on_attach = function(client)
+            -- Disable formatting due to bugs: https://github.com/sqls-server/sqls/issues/149
+            client.server_capabilities.documentFormattingProvider = false
+            client.server_capabilities.documentRangeFormattingProvider = false
+          end,
+        },
+      },
+    },
+  },
+  {
+    "nanotee/sqls.nvim",
+    dependencies = {
+      "AstroNvim/astrocore",
+      opts = {
+        autocmds = {
+          sqls_attach = {
+            {
+              event = "LspAttach",
+              desc = "Load sqls.nvim with sqls",
+              callback = function(args)
+                local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
+                if client.name == "sqls" then
+                  require("sqls").on_attach(client, args.buf)
+                end
+              end,
+            },
+          },
+        },
+      },
+    },
+  },
 }
