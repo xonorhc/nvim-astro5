@@ -13,7 +13,6 @@ return {
       overrides = {},
     },
   },
-  -- change colorscheme
   {
     "AstroNvim/astroui",
     ---@type AstroUIOpts

@@ -8,8 +8,8 @@ return {
     opts = {
       transparent_background = true,
       terminal_colors = true,
-      devicons = true, -- highlight the icons of `nvim-web-devicons`
-      filter = "pro", -- classic | octagon | pro | machine | ristretto | spectrum
+      devicons = true,
+      filter = "machine", -- classic | octagon | pro | machine | ristretto | spectrum
       plugins = {
         indent_blankline = {
           context_highlight = "pro", -- default | pro
@@ -18,7 +18,6 @@ return {
       },
     },
   },
-  -- change colorscheme
   {
     "AstroNvim/astroui",
     ---@type AstroUIOpts

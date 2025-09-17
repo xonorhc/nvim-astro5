@@ -9,7 +9,6 @@ return {
       transparent = false,
     },
   },
-  -- change colorscheme
   {
     "AstroNvim/astroui",
     ---@type AstroUIOpts

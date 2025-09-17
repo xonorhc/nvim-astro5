@@ -14,8 +14,8 @@ return {
 
       enable = {
         terminal = true,
-        legacy_highlights = true, -- Improve compatibility for previous versions of Neovim
-        migrations = true, -- Handle deprecated options automatically
+        legacy_highlights = true,
+        migrations = true,
       },
 
       styles = {
@@ -54,37 +54,8 @@ return {
         h5 = "pine",
         h6 = "foam",
       },
-
-      palette = {
-        -- Override the builtin palette per variant
-        -- moon = {
-        --     base = '#18191a',
-        --     overlay = '#363738',
-        -- },
-      },
-
-      -- NOTE: Highlight groups are extended (merged) by default. Disable this
-      -- per group via `inherit = false`
-      highlight_groups = {
-        -- Comment = { fg = "foam" },
-        -- StatusLine = { fg = "love", bg = "love", blend = 15 },
-        -- VertSplit = { fg = "muted", bg = "muted" },
-        -- Visual = { fg = "base", bg = "text", inherit = false },
-      },
-      before_highlight = function(group, highlight, palette)
-        -- Disable all undercurls
-        -- if highlight.undercurl then
-        --     highlight.undercurl = false
-        -- end
-        --
-        -- Change palette colour
-        -- if highlight.fg == palette.pine then
-        --     highlight.fg = palette.foam
-        -- end
-      end,
     },
   },
-  -- change colorscheme
   {
     "AstroNvim/astroui",
     ---@type AstroUIOpts

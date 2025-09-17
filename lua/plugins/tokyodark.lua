@@ -6,19 +6,18 @@ return {
     "tiagovla/tokyodark.nvim",
     lazy = true,
     opts = {
-      transparent_background = true, -- set background to transparent
-      gamma = 1.00, -- adjust the brightness of the theme
+      transparent_background = true,
+      gamma = 1.00,
       styles = {
-        comments = { italic = true }, -- style for comments
-        keywords = { italic = true }, -- style for keywords
-        identifiers = { italic = true }, -- style for identifiers
-        functions = {}, -- style for functions
-        variables = {}, -- style for variables
+        comments = { italic = true },
+        keywords = { italic = true },
+        identifiers = { italic = true },
+        functions = {},
+        variables = {},
       },
-      terminal_colors = true, -- enable terminal colors
+      terminal_colors = true,
     },
   },
-  -- change colorscheme
   {
     "AstroNvim/astroui",
     ---@type AstroUIOpts

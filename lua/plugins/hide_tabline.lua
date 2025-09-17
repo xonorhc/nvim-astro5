@@ -1,4 +1,4 @@
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 return {
   {
@@ -13,8 +13,6 @@ return {
   },
   {
     "rebelot/heirline.nvim",
-    opts = function(_, opts)
-      opts.tabline = nil -- remove tabline
-    end,
+    opts = function(_, opts) opts.tabline = nil end,
   },
 }

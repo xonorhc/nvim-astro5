@@ -26,8 +26,6 @@ return {
     },
     groups = { all = { NormalFloat = { link = "Normal" } } },
   },
-
-  -- change colorscheme
   {
     "AstroNvim/astroui",
     ---@type AstroUIOpts

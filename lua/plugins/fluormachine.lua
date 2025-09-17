@@ -14,7 +14,6 @@ return {
       },
     },
   },
-  -- change colorscheme
   {
     "AstroNvim/astroui",
     ---@type AstroUIOpts

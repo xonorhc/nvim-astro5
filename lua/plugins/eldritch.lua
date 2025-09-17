@@ -10,7 +10,6 @@ return {
       terminal_colors = true,
     },
   },
-  -- change colorscheme
   {
     "AstroNvim/astroui",
     ---@type AstroUIOpts
