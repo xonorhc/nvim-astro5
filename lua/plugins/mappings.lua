@@ -28,9 +28,7 @@ return {
           ["<C-k>"] = { "<Up>", desc = "Move up" },
           ["<C-l>"] = { "<Right>", desc = "Move right" },
         },
-        t = {
-          ["<esc>"] = false,
-        },
+        t = {},
       },
     },
   },
