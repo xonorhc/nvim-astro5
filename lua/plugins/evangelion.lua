@@ -3,14 +3,14 @@ if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 ---@type LazySpec
 return {
   {
-    "maxmx03/fluoromachine.nvim",
-    lazy = true,
+    "xero/evangelion.nvim",
+    lazy = false,
+    priority = 1000,
     opts = {
-      glow = true,
-      theme = "fluoromachine", -- fluoromachine | delta | retrowave
       transparent = true,
-      plugins = {
-        neotree = false,
+      overrides = {
+        keyword = { fg = "#00ff00", bg = "#222222", undercurl = true },
+        ["@boolean"] = { link = "Special" },
       },
     },
   },
@@ -18,7 +18,7 @@ return {
     "AstroNvim/astroui",
     ---@type AstroUIOpts
     opts = {
-      colorscheme = "fluoromachine",
+      colorscheme = "evangelion",
     },
   },
 }
