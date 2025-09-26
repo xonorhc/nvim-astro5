@@ -12,14 +12,14 @@ return {
         "bash-language-server",
         "shellcheck",
         "marksman",
+        "django-template-lsp",
 
         -- install formatters
         "stylua",
-        "prettier",
+        "shfmt",
         "isort",
         "black",
-        "pgformatter",
-        "shfmt",
+        "prettier",
 
         -- install debuggers
         "debugpy",
