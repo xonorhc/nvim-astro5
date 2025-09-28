@@ -4,7 +4,7 @@ return {
   {
     "b0o/schemastore.nvim",
     lazy = true,
-    specs = {
+    dependencies = {
       {
         "AstroNvim/astrolsp",
         optional = true,
@@ -12,12 +12,15 @@ return {
         opts = {
           ---@diagnostic disable: missing-fields
           config = {
-            jsonls = {
+            yamlls = {
               on_new_config = function(config)
-                if not config.settings.json.schemas then config.settings.json.schemas = {} end
-                vim.list_extend(config.settings.json.schemas, require("schemastore").json.schemas())
+                config.settings.yaml.schemas = vim.tbl_deep_extend(
+                  "force",
+                  config.settings.yaml.schemas or {},
+                  require("schemastore").yaml.schemas()
+                )
               end,
-              settings = { json = { validate = { enable = true } } },
+              settings = { yaml = { schemaStore = { enable = false, url = "" } } },
             },
           },
         },
@@ -29,9 +32,7 @@ return {
     optional = true,
     opts = function(_, opts)
       if opts.ensure_installed ~= "all" then
-        opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
-          "json",
-        })
+        opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, { "yaml" })
       end
     end,
   },
@@ -39,14 +40,14 @@ return {
     "williamboman/mason-lspconfig.nvim",
     optional = true,
     opts = function(_, opts)
-      opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, { "jsonls" })
+      opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, { "yamlls" })
     end,
   },
   {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     optional = true,
     opts = function(_, opts)
-      opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, { "json-lsp" })
+      opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, { "yaml-language-server" })
     end,
   },
 }
