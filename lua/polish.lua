@@ -6,9 +6,9 @@ if true then return end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 local map = vim.keymap.set
 
-map("n", "<A-p>", "<Cmd>w<CR> <Cmd>below split | term python3 %<CR> i", { noremap = true, silent = true })
-
 map("n", "<A-j>", "<Cmd>w<CR> <Cmd>below split | term node %<CR> i", { noremap = true, silent = true })
+
+map("n", "<A-p>", "<Cmd>w<CR> <Cmd>below split | term python3 %<CR> i", { noremap = true, silent = true })
 
 -- -- Python built-in terminal: {{{
 -- map("n", "<F5>", function()

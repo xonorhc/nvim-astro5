@@ -7,7 +7,7 @@ return {
   ---@type CatppuccinOptions
   ---@diagnostic disable: missing-fields
   opts = {
-    transparent_background = false,
+    transparent_background = true,
     auto_integrations = true,
     integrations = {
       colorful_winsep = { color = "lavender" },

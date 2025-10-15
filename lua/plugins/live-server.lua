@@ -18,5 +18,7 @@ return {
     vim.cmd(cmd)
   end,
   cmd = { "LiveServerStart", "LiveServerStop" },
-  opts = {},
+  opts = {
+    args = { "--port=7000", "--browser=firefox" },
+  },
 }
