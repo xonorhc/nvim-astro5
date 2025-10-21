@@ -24,6 +24,8 @@ return {
   init = function()
     local plugin = require("lazy.core.config").spec.plugins["markdown-preview.nvim"]
     vim.g.mkdp_filetypes = require("lazy.core.plugin").values(plugin, "ft", true)
+    vim.g.mkdp_browser = "firefox"
+    vim.g.mkdp_theme = "dark"
     vim.g.mkdp_markdown_css = "~/Documents/css/markdown-air.css"
     vim.g.mkdp_preview_options = { disable_filename = true }
   end,
