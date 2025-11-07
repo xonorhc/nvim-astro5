@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 return {
   "catppuccin/nvim",
@@ -7,7 +7,7 @@ return {
   ---@type CatppuccinOptions
   ---@diagnostic disable: missing-fields
   opts = {
-    flavour = "macchiato", -- latte, frappe, macchiato, mocha
+    flavour = "macchiato",
     background = {
       light = "latte",
       dark = "mocha",
@@ -94,13 +94,6 @@ return {
           additional_vim_regex_highlighting = false,
         },
       },
-    },
-  },
-  {
-    "AstroNvim/astroui",
-    ---@type AstroUIOpts
-    opts = {
-      colorscheme = "catppuccin",
     },
   },
 }
