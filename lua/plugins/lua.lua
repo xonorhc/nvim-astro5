@@ -1,4 +1,4 @@
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 local function selene_configured(path)
   return #vim.fs.find("selene.toml", { path = path, upward = true, type = "file" }) > 0
