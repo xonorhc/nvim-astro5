@@ -4,15 +4,9 @@
 -- This is just pure lua so anything that doesn't
 -- fit in the normal config locations above can go here
 
-local map = vim.keymap.set
-
-map("n", "<A-n>", "<Cmd>w<CR> <Cmd>below split | term node %<CR> i", { noremap = true, silent = true })
-
-map("n", "<A-p>", function()
-  vim.cmd "w"
-  vim.cmd "below split | term python %"
-  vim.cmd "startinsert"
-end, { desc = "Python built-in terminal" })
+-- local map = vim.keymap.set
+-- map("n", "<A-n>", "<Cmd>w<CR> <Cmd>below split | term node %<CR> i", { noremap = true, silent = true })
+-- map("n", "<A-p>", function() vim.cmd "w" vim.cmd "below split | term python %" vim.cmd "startinsert" end, { desc = "Python built-in terminal" })
 
 local terminal = require("toggleterm.terminal").Terminal
 local file_name = vim.api.nvim_buf_get_name(0)
