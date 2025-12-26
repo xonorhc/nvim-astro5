@@ -1,4 +1,4 @@
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 ---@type LazySpec
 return {
@@ -11,8 +11,8 @@ return {
         g = {
           sonokai_dim_inactive_windows = 1,
           sonokai_style = "maia",
-          sonokai_cursor = "yellow",
-          sonokai_transparent_background = true,
+          sonokai_cursor = "auto",
+          sonokai_transparent_background = 2,
         },
       },
     },

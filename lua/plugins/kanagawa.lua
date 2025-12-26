@@ -1,4 +1,4 @@
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 ---@type LazySpec
 return {
@@ -15,7 +15,6 @@ return {
     transparent = true,
     dimInactive = false,
     terminalColors = true,
-    colors = { palette = {}, theme = { wave = {}, lotus = {}, dragon = {}, all = {} } },
     overrides = function(colors)
       local theme = colors.theme
       return {
@@ -29,5 +28,32 @@ return {
     end,
     theme = "wave",
     background = { dark = "wave", light = "lotus" },
+    colors = {
+      palette = {
+        -- change all usages of these colors
+        sumiInk0 = "#000000",
+        fujiWhite = "#FFFFFF",
+      },
+      theme = {
+        -- change specific usages for a certain theme, or for all of them
+        wave = {
+          ui = {
+            float = {
+              bg = "none",
+            },
+          },
+        },
+        dragon = {
+          syn = {
+            parameter = "yellow",
+          },
+        },
+        all = {
+          ui = {
+            bg_gutter = "none",
+          },
+        },
+      },
+    },
   },
 }
