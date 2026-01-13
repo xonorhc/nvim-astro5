@@ -5,12 +5,10 @@ return {
   "maxmx03/fluoromachine.nvim",
   lazy = true,
   opts = {
-    glow = true,
     theme = "retrowave",
+    brightness = 0.05,
+    glow = true,
     transparent = true,
-    plugins = {
-      neotree = false,
-    },
     overrides = {
       ["@type"] = { italic = true, bold = false },
       ["@function"] = { italic = false, bold = false },
@@ -20,6 +18,9 @@ return {
       ["@variable"] = { italic = true },
       ["@field"] = { italic = true },
       ["@parameter"] = { italic = true },
+      NormalFloat = { bg = "none" },
+      FloatBorder = { bg = "none" },
+      FloatTitle = { bg = "none" },
     },
   },
 }

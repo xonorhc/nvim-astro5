@@ -5,10 +5,13 @@ return {
   "Mofiqul/dracula.nvim",
   lazy = true,
   opts = {
-    show_end_of_buffer = true,
     transparent_bg = true,
     lualine_bg_color = "NONE",
     italic_comment = true,
-    overrides = {},
+    overrides = {
+      NormalFloat = { bg = "none" },
+      FloatBorder = { bg = "none" },
+      FloatTitle = { bg = "none" },
+    },
   },
 }

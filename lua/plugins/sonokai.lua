@@ -9,10 +9,9 @@ return {
     opts = {
       options = {
         g = {
-          sonokai_dim_inactive_windows = 1,
-          sonokai_style = "maia",
-          sonokai_cursor = "auto",
+          sonokai_style = "atlantis",
           sonokai_transparent_background = 2,
+          sonokai_float_style = "blend",
         },
       },
     },
