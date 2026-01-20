@@ -10,8 +10,8 @@ return {
     underline = true,
     bold = true,
     italic = {
-      strings = true,
-      emphasis = true,
+      strings = false,
+      emphasis = false,
       comments = true,
       operators = false,
       folds = true,
