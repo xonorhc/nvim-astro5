@@ -20,7 +20,8 @@ return {
           ["<C-s>"] = { ":w!<cr>", desc = "Save File" },
           [";"] = { ":", desc = "CMD enter command mode" },
           ["<Leader><Tab>"] = { function() require("astrocore.buffer").nav(1) end, desc = "Next buffer" },
-          ["<A-p>"] ={function() vim.cmd "w" vim.cmd "below split | term python %" vim.cmd "startinsert" end, desc = "Python built-in terminal"},
+          ["<A-p>"] = {function() vim.cmd "w" vim.cmd "below split | term python %" vim.cmd "startinsert" end, desc = "Run Python code on built-in terminal"},
+          ["<A-n>"] = "<Cmd>w<CR> <Cmd>below split | term node %<CR> i", desc = "Run JS code on built-in terminal"},
         },
         i = {
           ["<C-s>"] = { "<ESC>:w!<cr>", desc = "Save File" },
