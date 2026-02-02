@@ -19,6 +19,7 @@ return {
           },
           ["<C-s>"] = { ":w!<cr>", desc = "Save File" },
           [";"] = { ":", desc = "CMD enter command mode" },
+          ["<Leader><Tab>"] = { function() require("astrocore.buffer").nav(1) end, desc = "Next buffer" },
         },
         i = {
           ["<C-s>"] = { "<ESC>:w!<cr>", desc = "Save File" },
