@@ -17,8 +17,11 @@ return {
             end,
             desc = "Pick to close",
           },
+          ["<C-s>"] = { ":w!<cr>", desc = "Save File" },
         },
-        i = {},
+        i = {
+          ["<C-s>"] = { "<ESC>:w!<cr>", desc = "Save File" },
+        },
         t = {},
       },
     },
