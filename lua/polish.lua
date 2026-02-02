@@ -16,3 +16,13 @@ local python = terminal:new {
 }
 function _python_toggle() python:toggle() end
 vim.api.nvim_set_keymap("n", "<Leader>rp", "<cmd>lua _python_toggle()<CR>", { noremap = true, silent = true })
+
+local node = terminal:new {
+  cmd = 'node "' .. file_name .. '"',
+  hidden = false,
+  direction = "float",
+  close_on_exit = false,
+  start_in_insert = true,
+}
+function _node_toggle() node:toggle() end
+vim.api.nvim_set_keymap("n", "<Leader>rn", "<cmd>lua _node_toggle()<CR>", { noremap = true, silent = true })
