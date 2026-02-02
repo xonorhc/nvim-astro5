@@ -9,6 +9,14 @@ return {
         n = {
           ["<Leader>b"] = { desc = "Buffers" },
           ["<Leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
+          ["<Leader>bD"] = {
+            function()
+              require("astroui.status").heirline.buffer_picker(
+                function(bufnr) require("astrocore.buffer").close(bufnr) end
+              )
+            end,
+            desc = "Pick to close",
+          },
         },
         i = {},
         t = {},
