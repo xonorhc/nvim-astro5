@@ -18,6 +18,7 @@ return {
             desc = "Pick to close",
           },
           ["<C-s>"] = { ":w!<cr>", desc = "Save File" },
+          [";"] = { ":", desc = "CMD enter command mode" },
         },
         i = {
           ["<C-s>"] = { "<ESC>:w!<cr>", desc = "Save File" },
