@@ -30,15 +30,15 @@ return {
           },
           ["<A-n>"] = { "<Cmd>w<CR> <Cmd>below split | term node %<CR> i", desc = "Run JS code on built-in terminal" },
         },
+        i = {
+          ["<C-s>"] = { "<ESC>:w!<cr>", desc = "Save File" },
+          ["<C-h>"] = { "<Left>", desc = "Move left" },
+          ["<C-j>"] = { "<Down>", desc = "Move down" },
+          ["<C-k>"] = { "<Up>", desc = "Move up" },
+          ["<C-l>"] = { "<Right>", desc = "Move right" },
+        },
+        t = {},
       },
-      i = {
-        ["<C-s>"] = { "<ESC>:w!<cr>", desc = "Save File" },
-        ["<C-h>"] = { "<Left>", desc = "Move left" },
-        ["<C-j>"] = { "<Down>", desc = "Move down" },
-        ["<C-k>"] = { "<Up>", desc = "Move up" },
-        ["<C-l>"] = { "<Right>", desc = "Move right" },
-      },
-      t = {},
     },
   },
   {
